@@ -1,6 +1,7 @@
 require 'directors_database'
 
 def directors_totals(nds)
+  require 'pp' 
   result = {}
   index = 0
   while index < nds.size do
@@ -8,6 +9,7 @@ def directors_totals(nds)
     result[director_name[:name]] = gross_for_director(director_name)
     index += 1
   end
+  pp nds
   result
 end
 def gross_for_director(director_data)
